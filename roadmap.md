@@ -6,8 +6,8 @@
 
 ## Task Checklist
 
-- [x] **Day 0** — Infrastructure & Environment Hardening
-- [x] **Day 1** — Snowflake-First Baseline (in progress)
+- [x] **Day 0** — Infrastructure & Environment Hardening ✅
+- [ ] **Day 1** — Snowflake-First Baseline (in progress)
 - [ ] **Day 2** — Advanced Feature Engineering
 - [ ] **Day 3** — Model Architecture & Validation Strategy
 - [ ] **Day 4** — Industrial Training & First Submission
@@ -17,32 +17,34 @@
 
 ---
 
-## DAY 0: Infrastructure & Environment Hardening
+## DAY 0: Infrastructure & Environment Hardening ✅
 
 Before touching the data, ensure your "factory" is built.
 
 - **Snowflake Environment:**
-  - Initialize your 120-day trial
-  - Create a specific `EY_CHALLENGE` database
-  - Separate schemas: `RAW`, `STAGING`, `ANALYTICS` (keeps feature engineering organized)
+  - ✅ Initialize your 120-day trial
+  - ✅ Create a specific `EY_CHALLENGE` database
+  - ✅ Separate schemas: `RAW`, `STAGING`, `ANALYTICS` (keeps feature engineering organized)
 - **Compute Setup:**
-  - Warehouse set to `X-Small` (save credits), auto-resume ON
+  - ✅ Warehouse set to `X-Small` (save credits), auto-resume ON
 - **Local Dev Environment:**
-  - Use `conda` or `venv` to isolate dependencies
-  - Key packages: `snowflake-snowpark-python`, `xgboost`, `scikit-learn`, `matplotlib`, `seaborn`
+  - ⏳ Use `conda` or `venv` to isolate dependencies (NOT DONE YET)
+  - ⏳ Key packages: `snowflake-snowpark-python`, `xgboost`, `scikit-learn`, `matplotlib`, `seaborn` (NOT DONE YET)
 
 ---
 
-## DAY 1: The "Snowflake-First" Baseline
+## DAY 1: The "Snowflake-First" Baseline (In Progress)
 
 Don't rush to Python. Let Snowflake handle the heavy lifting.
 
-- **Data Ingestion:** Load provided `.csv` files into `RAW` tables
-- **Snowpark Integration:** Connect local Jupyter notebook to Snowflake via `Session` object
+- **Data Ingestion:** ✅ Load provided `.csv` files into `RAW` tables
+- **Snowpark Integration:** ✅ Connect local Jupyter notebook to Snowflake via `Session` object
 - **The Baseline Run:**
-  - Execute the EY-provided benchmark
-  - **Target Metric:** Confirm you can reproduce R² ≈ 0.20 locally
-  - **Data Audit:** Check for missing values in targets (`ALKALINITY`, `SALINITY`, `PHOSPHORUS`)
+  - 🔄 Execute the EY-provided benchmark (BENCHMARK_MODEL_NOTEBOOK_SNOWFLAKE.ipynb)
+  - ⏳ **Target Metric:** Confirm you can reproduce R² ≈ 0.20 locally
+  - ⏳ **Data Audit:** Check for missing values in targets (`ALKALINITY`, `SALINITY`, `PHOSPHORUS`)
+
+**Note:** External Access Integration for satellite data saved for later (see `fix_external_access.md`)
 
 ---
 
